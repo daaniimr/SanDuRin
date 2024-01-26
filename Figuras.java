@@ -14,7 +14,7 @@ public class Figuras {
         System.out.println("Área del círculo: " + areaCirculo);
 
 
-// Calcular área de un rectángulo
+	// Calcular área de un rectángulo
         System.out.print("Ingrese la longitud del rectángulo: ");
         double longitudRectangulo = scanner.nextDouble();
         System.out.print("Ingrese la anchura del rectángulo: ");
@@ -30,7 +30,24 @@ public class Figuras {
         double areaCilindro = calcularAreaCilindro(radioCilindro, alturaCilindro);
         System.out.println("Área del cilindro: " + areaCilindro);
 
-         // Método para calcular el área de un círculo
+	//Calcular area de una piramide
+	System.out.print("Ingrese la longitud del lado de la base de la pirámide: ");
+        double ladoBasePiramide = scanner.nextDouble();
+        System.out.print("Ingrese la altura de la pirámide: ");
+        double alturaPiramide = scanner.nextDouble();
+        double areaPiramide = calcularAreaPiramide(ladoBasePiramide, alturaPiramide);
+        System.out.println("Área de la pirámide: " + areaPiramide);
+
+
+
+
+        scanner.close();
+
+
+
+
+
+      // Método para calcular el área de un círculo
     	private static double calcularAreaCirculo(double radio) {
         	return Math.PI * Math.pow(radio, 2);
    	 }
@@ -48,5 +65,11 @@ public class Figuras {
         	return areaBases + areaLateral;
     	}
 
-   }
+	 // Método para calcular el área de una pirámide de base cuadrada
+    	private static double calcularAreaPiramide(double ladoBase, double altura) {
+        	// El área de la base de la pirámide es ladoBase * ladoBase (área de un cuadrado)
+        	double areaBase = Math.pow(ladoBase, 2);
+   	}
+
+  }
 }
