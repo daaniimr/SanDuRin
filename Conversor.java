@@ -15,7 +15,15 @@ public class Conversor {
         // Mostrar el resultado
         System.out.println(kilometros + " kilómetros son equivalentes a " + millas + " millas.");
 
+	System.out.println(kilometros + " kilómetros son equivalentes a " + metros + " 		 metros.");
         // Cerrar el scanner para evitar fugas de recursos
         scanner.close();
+        
+    
+    }
+    
+    // Método para convertir kilómetros a metros
+    private static double convertirAKilometrosAMetros(double kilometros) {
+        return kilometros * 1000;
     }
 }
