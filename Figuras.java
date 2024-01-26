@@ -38,6 +38,13 @@ public class Figuras {
         double areaPiramide = calcularAreaPiramide(ladoBasePiramide, alturaPiramide);
         System.out.println("Área de la pirámide: " + areaPiramide);
 
+	// Calcular área de un rombo
+        System.out.print("Ingrese la longitud de la diagonal mayor del rombo: ");
+        double diagonalMayorRombo = scanner.nextDouble();
+        System.out.print("Ingrese la longitud de la diagonal menor del rombo: ");
+        double diagonalMenorRombo = scanner.nextDouble();
+        double areaRombo = calcularAreaRombo(diagonalMayorRombo, diagonalMenorRombo);
+        System.out.println("Área del rombo: " + areaRombo);
 
 
 
@@ -71,5 +78,9 @@ public class Figuras {
         	double areaBase = Math.pow(ladoBase, 2);
    	}
 
+	private static double calcularAreaRombo(double diagonalMayor, double diagonalMenor) {
+       	 // El área de un rombo es (diagonalMayor * diagonalMenor) / 2
+        	return (diagonalMayor * diagonalMenor) / 2;
+    }
   }
 }
