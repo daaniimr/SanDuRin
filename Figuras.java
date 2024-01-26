@@ -52,6 +52,11 @@ public class Figuras {
 	double areaPentagono = calcularAreaPentagono(ladoPentagono);
 	System.out.println("Área del pentágono: " + areaPentagono);
 
+	// Calcular área de un hexágono
+        System.out.print("Ingrese la longitud del lado del hexágono: ");
+        double ladoHexagono = scanner.nextDouble();
+        double areaHexagono = calcularAreaHexagono(ladoHexagono);
+        System.out.println("Área del hexágono: " + areaHexagono);
 
         scanner.close();
 
@@ -94,6 +99,11 @@ public class Figuras {
     		return 0.25 * Math.sqrt(5 * (5 + 2 * Math.sqrt(5))) * Math.pow(lado, 2);
 	}
 
+	// Método para calcular el área de un hexágono regular
+    	private static double calcularAreaHexagono(double lado) {
+        	// El área de un hexágono regular es (3 * sqrt(3) * lado^2) / 2
+        	return (3 * Math.sqrt(3) * Math.pow(lado, 2)) / 2;
+    	}
 
   }
 }
