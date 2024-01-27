@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Conversor {
     public static void main(String[] args) {
-     // Crear un objeto Scanner para la entrada del usuario
+       // Crear un objeto Scanner para la entrada del usuario
         Scanner scanner = new Scanner(System.in);
 
         // Solicitar al usuario que ingrese la cantidad en kilómetros
@@ -21,11 +21,15 @@ public class Conversor {
         // Calcular los decímetros (1 kilómetro = 10,000 decímetros)
         double decimetros = convertirAKilometrosADecimetros(kilometros);
 
+        // Calcular los milímetros (1 kilómetro = 1,000,000 milímetros)
+        double milimetros = convertirAKilometrosAMilimetros(kilometros);
+
         // Mostrar los resultados
         System.out.println(kilometros + " kilómetros son equivalentes a " + millas + " millas.");
         System.out.println(kilometros + " kilómetros son equivalentes a " + metros + " metros.");
         System.out.println(kilometros + " kilómetros son equivalentes a " + centimetros + " centímetros.");
         System.out.println(kilometros + " kilómetros son equivalentes a " + decimetros + " decímetros.");
+        System.out.println(kilometros + " kilómetros son equivalentes a " + milimetros + " milímetros.");
 
         // Cerrar el scanner para evitar fugas de recursos
         scanner.close();
@@ -49,5 +53,10 @@ public class Conversor {
     // Método para convertir kilómetros a decímetros
     private static double convertirAKilometrosADecimetros(double kilometros) {
         return kilometros * 10000;
+    }
+
+    // Método para convertir kilómetros a milímetros
+    private static double convertirAKilometrosAMilimetros(double kilometros) {
+        return kilometros * 1000000;
     }
 }
