@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Conversor {
     public static void main(String[] args) {
-        // Crear un objeto Scanner para la entrada del usuario
+// Crear un objeto Scanner para la entrada del usuario
         Scanner scanner = new Scanner(System.in);
 
         // Solicitar al usuario que ingrese la cantidad en kilómetros
@@ -10,20 +10,35 @@ public class Conversor {
         double kilometros = scanner.nextDouble();
 
         // Calcular las millas (1 kilómetro = 0.621371 millas)
-        double millas = kilometros * 0.621371;
+        double millas = convertirAKilometrosAMillas(kilometros);
 
-        // Mostrar el resultado
+        // Calcular los metros (1 kilómetro = 1000 metros)
+        double metros = convertirAKilometrosAMetros(kilometros);
+
+        // Calcular los centímetros (1 kilómetro = 100,000 centímetros)
+        double centimetros = convertirAKilometrosACentimetros(kilometros);
+
+        // Mostrar los resultados
         System.out.println(kilometros + " kilómetros son equivalentes a " + millas + " millas.");
+        System.out.println(kilometros + " kilómetros son equivalentes a " + metros + " metros.");
+        System.out.println(kilometros + " kilómetros son equivalentes a " + centimetros + " centímetros.");
 
-	System.out.println(kilometros + " kilómetros son equivalentes a " + metros + " 		 metros.");
         // Cerrar el scanner para evitar fugas de recursos
         scanner.close();
-        
-    
     }
-    
+
+    // Método para convertir kilómetros a millas
+    private static double convertirAKilometrosAMillas(double kilometros) {
+        return kilometros * 0.621371;
+    }
+
     // Método para convertir kilómetros a metros
     private static double convertirAKilometrosAMetros(double kilometros) {
         return kilometros * 1000;
+    }
+
+    // Método para convertir kilómetros a centímetros
+    private static double convertirAKilometrosACentimetros(double kilometros) {
+        return kilometros * 100000;
     }
 }
